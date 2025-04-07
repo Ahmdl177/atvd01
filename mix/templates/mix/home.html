@@ -8,11 +8,11 @@
                 {% if produto.image %}
                     <img src="{{ produto.image.url }}" class="card-img-top" alt="{{ produto.nome }}" style="height: 200px; object-fit: cover;">
                 {% else %}
-                     <img src="..." class="card-img-top" alt="Sem imagem" style="height: 200px; object-fit: cover; background-color: #bd0909;">
+                     <img src="..." class="card-img-top" alt="Sem imagem" style="height: opx; background-color: red;">
                 {% endif %}
-                <div class="card-body">
-                    <h5 class="card-title">{{ produto.nome }}</h5>
-                    <a href="{% url 'detalhe_produto' produto.id %}" class="btn btn-primary">Ver Detalhes</a> </div>
+                <div class="card-body" style="height: 150px;  background-color: rgb(255, 255, 255) ;">
+                    <h5 class="card-title" > {{ produto.nome }}</h5>
+                    <a href="{% url 'detalhe_produto' produto.id %}" class="btn btn-primary" style="height: 40px; object-fit: cover; background-color: #fe0016 ;">Ver Detalhes</a> </div>
             </div>
         </div>
     {% empty %}
